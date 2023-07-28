@@ -195,7 +195,6 @@ Examples:
 */
 
 function find(arr, searchValue) {
-    //return arr.find(val => val == searchValue);
     const filteredArr = arr.filter(val => val == searchValue);
     if (filteredArr) {
         return filteredArr[0]
@@ -212,7 +211,6 @@ Examples:
 */
 
 function findInObj(arr, key, searchValue) {
-    //return arr.find(val => val[key] == searchValue);
     const filteredArr = arr.filter(val => val[key] == searchValue);
     if (filteredArr) {
         return filteredArr[0]
@@ -230,11 +228,10 @@ Examples:
     removeVowels('ZZZZZZ') // ('zzzzzz')
 */
 
-//const vowelRegex = /^[aeiou]$/i;
 function removeVowels(str) {
-    //return Array.from(str).filter(val => !vowelRegex.test(val)).join("").toLowerCase();
     const vowels = ['a', 'e', 'i', 'o', 'u'];
-    const filteredStr = Array.from(str).filter(val => !vowels.includes(val.toLowerCase())).join("").toLowerCase();
+    lowerCaseStr = str.toLowerCase();
+    const filteredStr = Array.from(lowerCaseStr).filter(val => !vowels.includes(val)).join("");
     if (filteredStr) {
         return filteredStr;
     } else {
